@@ -8,13 +8,16 @@ import {connect} from 'react-redux';
 import './movie-page.css';
 import './../movie-list-item/movie-list-item.css'
 
-const GetGenres = ({genres}) => {
-    const names = genres.map((genre)=>genre.name);
-    return (
-       <div>
-            {names.join(' | ')}
-        </div>
-    )
+class GetGenres extends Component {
+    render() {
+        const {genres} = this.props;
+        const names = genres.map((genre)=>genre.name);
+        return (
+            <div>
+                {names.join(' | ')}
+             </div>
+         )
+    }
 }
 
 class UpdateMovieInCart extends Component {
