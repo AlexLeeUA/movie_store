@@ -8,18 +8,6 @@ import {connect} from 'react-redux';
 import './movie-page.css';
 import './../movie-list-item/movie-list-item.css'
 
-class GetGenres extends Component {
-    render() {
-        const {genres} = this.props;
-        const names = genres.map((genre)=>genre.name);
-        return (
-            <div>
-                {names.join(' | ')}
-             </div>
-         )
-    }
-}
-
 class UpdateMovieInCart extends Component {
         
     state = {
@@ -76,7 +64,9 @@ class MoviePage extends Component {
 
         const {movie, imagePath, loading, defaultPrice, itemsAddedToCheckoutFromPP, itemsAddedToCart} = this.props;
         const fullPath=`${imagePath}${movie.path}`;
-        const genres = movie.genres;    
+        const genres = movie.genres; 
+        const names = genres.map((genre)=>genre.name); 
+        const genresList = names.join(' | ');
 
         if (loading) {
             return <Spinner />
@@ -91,8 +81,8 @@ class MoviePage extends Component {
                             {movie.title}
                         </div>
                         <div className="details">
-                            <div className="movie-genre">Movie genre: <GetGenres genres={genres} /></div>
-                            <div className="movie-release">Release: <div>{movie.release}</div></div>
+                            <div className="movie-genre">Movie genre: {genresList}</div>
+                            <div className="movie-release">Release: {movie.release}</div>
                         </div>
                         <div className="overview">
                             <div className="overview-name">OVERVIEW</div>
