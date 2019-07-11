@@ -1,0 +1,64 @@
+@import url("../../styles-and-fonts/fonts.css");
+
+.list-number {
+    width: 100%;
+    height: 71px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.list-number button {
+    height: 50px;
+    font-family: "Circular Black";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #828286;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.list-number button:hover {
+    color: #0894a1;
+}
+
+.list-number .page-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    font-family: "Circular Black";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    color: #828286;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .list-number{
+        height: 50px;
+    }
+    .list-number button{
+        height: 40px;
+        font-size: 12px;
+        height: 25px;
+    }
+    .list-number .page-number{
+        font-size: 12px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+

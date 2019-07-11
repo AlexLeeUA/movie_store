@@ -1,0 +1,399 @@
+@import url("../../styles-and-fonts/fonts.css");
+
+.cart-container {  
+    width: 100%;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart {
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    padding: 0 20px 20px 20px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.empty-cart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: max-content;
+    width: auto;
+    text-align: center;
+}
+
+.empty-cart-phrase {
+    font-family: "Circular Bold";
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.empty-cart-image {
+    width: 50%;
+    height: 50%
+}
+
+@media (max-width: 767px) {
+    .cart-content {
+        flex-direction: column;
+    }
+    .cart {
+        width: 100%; 
+        padding: 0px;
+        margin-bottom: 8px;
+    }
+
+    .cart-container .cart-content .cart .title {
+        font-size: 12px; 
+        margin-left: 10px;
+    }
+    .cart-container .cart-content .cart .general-info{
+        width: 96%;
+        align-items: center;
+        margin-left: 10px;       
+    }
+    .cart-container .cart-content .cart .general-info .movie-image {
+        width: 50px;
+        height: 50%;
+    }
+    .cart-container .cart-content .cart .general-info .movie-title {
+        font-size: 10px;
+    }
+    .cart-container .cart-content .cart .general-info .quantity {
+        margin-top: 20px;
+    }
+    
+    .cart-container .cart-content .cart .general-info .quantity-name {
+        font-size: 9px;
+    }
+    .cart-container .cart-content .cart .general-info .quantity-value button {
+        width: 20px;
+        height: 20px;
+    }
+    .cart-container .cart-content .cart .general-info .quantity-value .value {
+        font-size: 9px;
+    }
+
+    .cart-container .cart-content .cart .general-info .price-value {
+        font-family: "Circular Medium";
+        font-size: 16px;
+    }
+
+    .cart-container .cart-content .purchase-items {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .cart-container .cart-content .purchase-items .data-table {
+        width: 100%;
+    }
+
+    .cart-container .cart-content .purchase-items .checkout-button {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .cart-container .cart-content .purchase-items .checkout-table .order {
+        font-size: 14px;
+        line-height: 1;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .items {
+        font-size: 12px;
+        line-height: 2;
+        height: 20px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .sub-total {
+        font-size: 12px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .shipping {
+        font-size: 12px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .sub-total-price {
+        font-size: 12px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .shipping-value {
+        font-size: 12px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .grand-total {
+        font-size: 14px;
+        line-height: 1.78;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table .grand-total-value{
+        font-size: 16px;
+    }
+    .cart-container .cart-content .purchase-items .checkout-table thead tr td{
+        height: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .cart-container .cart-content .checkout-table {
+        margin: 10px 10px;
+    }
+}
+
+.cart .title {
+    font-family: "Circular Bold";
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    color: #111111;
+    margin: 30px 0 0 0;
+}
+
+.cart .item-list {
+    margin-right: 10px;
+}
+
+.general-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px 0 rgba(216, 216, 216, 0.5);
+    border: solid 1px #f4f4f4;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0px;
+    margin: 10px 0;
+}
+.general-info .manage-info {
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-info .manage-info .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-info .quantity {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.general-info .remove-item {
+    background-image: url(../../styles-and-fonts/images/remove-button.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.general-info .remove-item:hover{
+    background-image: url(../../styles-and-fonts/images/remove-button-active.svg);
+}
+
+.general-info .movie-image {
+    width: 100px;
+    height: 100%;
+    margin: 10px 10px 6px 10px;
+}
+
+.general-info .movie-title {
+    font-family: "Circular Medium";
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: 0.2px;
+    color: #111111;
+    white-space: normal;
+}
+
+.general-info .quantity-name {
+    font-family: "Circular Book";
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.69;
+    letter-spacing: 0.1px;
+    color: #111111;
+}
+
+.general-info .quantity-value button {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border: none;
+    cursor: pointer;
+}
+
+.general-info .quantity-value button:hover{
+    background-color: #eaeaea;
+}
+
+.general-info .quantity-value {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.general-info .quantity-value .value {
+    font-family: "Circular Book";
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #828286;
+    margin: 0px 21px;
+}
+
+.general-info .price-value {
+    font-family: "Circular Medium";
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #828286;
+    margin-right: 10px;
+}
+
+.cart-container .purchase-items {
+    width: 35%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-container .cart-content .purchase-items .checkout-table td {
+    height: 40px;    
+}
+
+.cart-container .purchase-items .checkout-button {
+    height: 50px;
+    border-radius: 4px;
+    background-color: #eb553c;
+    border: none;
+    font-family: "Circular Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.cart-container .checkout-table {
+    margin: 30px 20px 30px 20px;
+}
+
+.cart-container .data-table {
+    background-color: #f4f4f4;
+}
+
+.cart-container .purchase-items .checkout-table .order {
+    font-family: "Circular Bold";
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    color: #111111;
+    line-height: 1.4;
+}
+
+.cart-container .purchase-items .checkout-table .items {
+    width: 79px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #e7e7e7;
+    font-family: "Circular Book";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #111111;
+    text-align: center;
+    display: inline-block;
+    line-height: 2;
+}
+
+.cart-container .purchase-items .checkout-table .sub-total, .shipping {
+    font-family: "Circular Book";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    color: #828286;
+}
+
+.cart-container .purchase-items .checkout-table .sub-total-price, .shipping-value {
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #828286;
+}
+
+.cart-container .purchase-items .checkout-table .grand-total {
+    font-family: "Circular Bold";
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: 0.2px;
+    color: #111111;
+}
+
+.cart-container .purchase-items .checkout-table .grand-total-value {
+    font-family: "Circular Bold";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #111111;
+}
+
+
+
+

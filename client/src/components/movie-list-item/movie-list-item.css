@@ -1,0 +1,222 @@
+@import url("../../styles-and-fonts/fonts.css");
+
+.movie-list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #fafafa;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.movie-list-item .main-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movie-list-item:hover{
+    box-shadow: 0 2px 10px 0 rgba(216, 216, 216, 0.5);
+    background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .movie-list-item {
+        height: auto;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .movie-list-item .movie-list-content .movie-title {
+        font-size: 12px;
+        margin-top: 10px;
+        line-height: 1.1;
+        white-space: normal;
+        overflow-wrap: normal
+    } 
+    .movie-list-item .poster {
+        width: 100px;
+    }
+    .movie-list-item .purchasing .add-to-cart  {
+        width: 100%;
+        height: 25px;
+        font-size: 10px;
+        background-image: none;
+    }
+    .movie-list-item .purchasing .buy-now  {
+        width: 100%;
+        height: 25px;
+        font-size: 10px;
+    }
+    .movie-list-item .content .movie-popularity{
+        width: 80px;
+        height: 16px;
+        font-size: 9px;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 1.7;
+    }
+     .movie-list-item .content .movie-release{
+        width: 85px;
+        height: 16px;
+        font-size: 9px;
+        padding-left: 5px;
+        padding-right: 5px;
+        line-height: 1.7;
+    }
+    .movie-list-item .movie-list-content .movie-price .price-name {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .movie-list-item .movie-list-content .movie-price .price-value {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+
+.poster {
+    width: 240px;
+    height: 100%;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.movie-list-item .movie-title {
+    font-family: "Circular Black";
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    color: #111111;
+    margin-top: 0px;
+}
+
+
+.movie-list-item .movie-title:hover {
+    color: #0e0377;
+}
+
+.movie-list-item .content {
+    display: block;
+}
+
+.movie-list-item .content div{
+    width: 140px;
+    height: 32px;
+    border-radius: 19px;
+    background-color: #ececec;
+    font-family: "Circular Black";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.4;
+    letter-spacing: 0.2px;
+    color: #828286;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.movie-list-item .movie-popularity {
+    white-space: nowrap;
+}
+
+.movie-list-item .movie-release {
+    white-space: nowrap;
+}
+
+.movie-list-item .movie-price .price-name {
+    font-family: "Circular Black";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: 0.2px;
+    color: #111111;
+    margin-top: 50px;
+}
+
+.movie-list-item .movie-price .price-value {
+    font-family: "Circular Black";
+    font-size: 34px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #828286;
+    margin-top: 20px;
+}
+
+.movie-list-item .add-to-cart {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #0894a1;
+    border: none;
+    font-family: "Circular Black";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    background-image: url(../../styles-and-fonts/images/button-cart.svg);
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.movie-list-item .add-to-cart:hover{
+    background-color: #057e89;
+}
+
+.movie-list-item .buy-now {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #eb553c;
+    border: none;
+    font-family: "Circular Black";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.movie-list-item .buy-now:hover{
+    background-color: #cf3f27;
+}
+
+.movie-list-item .main-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-list-item .content {
+    margin-right: 20px;
+}
+
+.movie-list-item .purchasing {
+    margin-right: 20px;
+}
+
+
+
+

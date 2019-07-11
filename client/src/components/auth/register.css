@@ -1,0 +1,111 @@
+@import url("../../styles-and-fonts/fonts.css");
+
+.register-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        align-items: center;
+    } 
+}
+
+.container .register-title {
+    font-size: 40px;
+    font-family: "Circular Black"
+}
+
+.container .check-question {
+    font-family: "Circular Medium";
+    font-size: 18px;
+}
+
+.container .check-question span {
+    margin-right: 10px;
+}
+
+.container form {
+    margin-top: 10px;
+}
+
+.container form label {
+    font-family: "Circular Book";
+}
+
+.container form .error {
+    font-family: "Circular Book";
+    color: red;
+}
+
+.container .input-block {
+    display: block;
+    flex-direction: row;
+}
+
+.container input {
+    width: 285px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border: 0px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #111111;
+    padding: 0px 15px;
+    overflow: hidden;
+}
+
+.container input:focus{
+    border: solid 1px #f4f4f4;
+    background-color: #ffffff;
+}
+
+.container input:focus::placeholder{
+    color: transparent;
+}
+
+.container .container-button {
+    display: flex;
+    justify-content: center;
+}
+
+.container .register-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: solid 1px #0894a1;
+    background-color: #ffffff;
+    font-family: "Circular Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #0894a1;
+    cursor: pointer;
+    
+}
+
+.container .register-button:hover {
+    background-color: #0894a1;
+    color: #ffffff;
+}

@@ -1,0 +1,17 @@
+
+.main-container {
+    width: 100%; 
+}
+
+.main-container .content {
+    margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+    .main-container .content {
+        margin-top: 25px;
+    } 
+}
+
+
+

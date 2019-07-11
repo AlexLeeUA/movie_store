@@ -1,0 +1,374 @@
+@import url("../../styles-and-fonts/fonts.css");
+@import url("../shopping-cart-table/shopping-cart-table.css");
+
+.checkout {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.checkout .title {
+    width: 100%;
+    font-family: "Circular Bold";
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: 0.2px;
+    color: #111111;
+}
+
+.checkout .payment-shipping-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 165%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin: 0 10px 0 20px;
+    padding: 10px 10px;
+}
+
+@media (max-width: 767px) {
+    .checkout {
+        align-items: center;
+        flex-direction: column; 
+        width: 100%;
+        background-color: #ffffff;
+    }
+    .checkout .title {
+        text-align: center;
+    }
+    .checkout .payment-shipping-container {
+        width: 100%;
+        margin: 10px 10px;
+        padding: 0;
+    }
+    .checkout .confirm-and-pay {
+        width: 100%;
+    }
+    .checkout .payment-shipping-container .shipping-address .shipping-container .shipping-form .shipping-form-group {
+        flex-direction: column; 
+        width: 100%;
+        align-items: flex-start;
+    }
+    .checkout .payment-shipping-container .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block {
+        margin-bottom: 10px;
+    }
+
+    .checkout .payment-shipping-container .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block input {
+        font-size: 20px;
+    }
+    .checkout .payment-shipping-container .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block select {
+        font-size: 20px;
+    }
+}
+
+.checkout .payment-shipping-container .methodOne, .methodTwo {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    border: solid 1px #f4f4f4;
+    background-color: #f4f4f4;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Circular Book";
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.checkout .payment-shipping-container .methodOne .master-vs-img {
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.checkout .payment-shipping-container .methodTwo .paypal-img {
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.checkout .shipping-address {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout .shipping-address .shipping-container .shipping-form {
+    width: 100%;
+}
+
+.checkout .shipping-address .shipping-container .shipping-form .shipping-form-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.checkout .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkout .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block input  {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border: 0px;
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #111111;
+}
+
+.checkout .shipping-address .shipping-container .shipping-form .shipping-form-group .input-block select {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    border: 0px;
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #111111;  
+}
+
+.checkout .shipping-address .shipping-form .input-block .error {
+    font-family: "Circular Book";
+    color: red;
+}
+
+.checkout .shipping-address #form input:focus{
+    border: solid 1px #f4f4f4;
+    background-color: #ffffff;
+}
+
+.checkout .shipping-address #form input:focus::placeholder{
+    color: transparent;
+}
+
+.checkout .shipping-address .add-the-address, .change-the-address {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: solid 1px #0894a1;
+    background-color: #ffffff;
+    font-family: "Circular Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #0894a1;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout .shipping-address .add-the-address:hover, .change-the-address:hover {
+    background-color: #0894a1;
+    color: #ffffff;
+}
+
+.checkout .shipping-address #result {
+    margin-top: 50px;
+}
+
+.checkout .shipping-address #result div {
+    font-family: "Circular Book";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: 0.2px;
+}
+
+.checkout .shipping-address #result span {
+    margin-right: 5px;
+}
+
+.checkout .confirm-and-pay {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 10px;
+    padding: 10px 10px;
+}
+
+.checkout .confirm-and-pay .title {
+    font-family: "Circular Bold";
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    color: #111111;
+}
+
+.checkout .total-dashboard {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    margin-top: 15px;
+}
+
+.checkout .confirm-and-pay .checkout-table {
+    width: 100%;
+}
+
+.checkout .confirm-and-pay .checkout-table td {
+    padding: 10px 10px 15px 10px;
+}
+
+.checkout .confirm-and-pay .checkout-table .sub-total, .shipping {
+    font-family: "Circular Book";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    color: #828286;
+    width: 100%;
+}
+
+.checkout .confirm-and-pay .checkout-table .sub-total-price, .shipping-value {
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #828286;
+}
+
+.checkout .confirm-and-pay .checkout-table .grand-total {
+    font-family: "Circular Bold";
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    color: #111111;
+}
+
+.checkout .confirm-and-pay .checkout-table .grand-total-value {
+    font-family: "Circular Bold";
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #111111;
+}
+.checkout .confirm-and-pay .checkout-items {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+.checkout .confirm-and-pay .checkout-items .item {
+    margin: 0px;
+    padding: 20px 0px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.checkout .confirm-and-pay .checkout-items .item .item-info {
+    display: flex;
+    flex-direction: flex-start;
+}
+
+.checkout .confirm-and-pay .checkout-items .item .picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.checkout .confirm-and-pay .checkout-items .item .title {
+    font-family: "Circular Medium";
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: 0.2px;
+    color: #111111;
+    text-align: left;
+}
+
+.checkout .confirm-and-pay .checkout-items .item .quantity {
+    font-family: "Circular Book";
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.69;
+    letter-spacing: 0.1px;
+    color: #111111;
+}
+
+.checkout .confirm-and-pay .checkout-items .item .price {
+    font-family: "Circular Medium";
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #828286;
+}
+
+.checkout .confirm-and-pay-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #eb553c;
+    font-family: "Circular Medium";
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
