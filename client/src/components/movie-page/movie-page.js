@@ -64,9 +64,9 @@ class MoviePage extends Component {
 
         const {movie, imagePath, loading, defaultPrice, itemsAddedToCheckoutFromPP, itemsAddedToCart} = this.props;
         const fullPath=`${imagePath}${movie.path}`;
-        const genres = movie.genres; 
-        const names = genres.map((genre)=>genre.name); 
-        const genresList = names.join(' | ');
+        //const genres = movie.genres; 
+        //const names = genres.map((genre)=>genre.name); 
+        //const genresList = names.join(' | ');
 
         if (loading) {
             return <Spinner />
@@ -80,8 +80,8 @@ class MoviePage extends Component {
                         <div className="movie-title">
                             {movie.title}
                         </div>
-                        <div className="details">
-                            <div className="movie-genre">Movie genre: {genresList}</div>
+                        <div className="details" key={movie.id}>
+                            <div className="movie-genre">Movie genre: genres</div>
                             <div className="movie-release">Release: {movie.release}</div>
                         </div>
                         <div className="overview">
