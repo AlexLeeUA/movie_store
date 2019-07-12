@@ -20,7 +20,6 @@ const changeListDec = (listId) => {
         }
     }
 
-
 const moviesLoaded = (newMovies) => {
     return {
         type: 'MOVIES_LOADED',
@@ -41,7 +40,6 @@ const moviesFound = (text) => {
         payload: text
     }
 }
-
 
 const movieIdGot = (id) => {
     return {
@@ -125,8 +123,6 @@ const itemsAddedToCheckoutFromPP = (quantity) => {
         payload: quantity
     }
 }
-
-
 
 export {
     defaultListLoaded,

@@ -11,15 +11,15 @@ import './../movie-list-item/movie-list-item.css'
 class UpdateMovieInCart extends Component {
         
     state = {
-        quantity: 0
-    }  
+        quantity: 1
+    }
         
     incr = () => {
         this.setState({quantity: this.state.quantity+1});
     }
         
     decr = () => {
-        if (this.state.quantity>0) {
+        if (this.state.quantity>1) {
             this.setState({quantity: this.state.quantity-1});
         }
     }
