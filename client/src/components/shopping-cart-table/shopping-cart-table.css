@@ -31,6 +31,11 @@
     text-align: center;
 }
 
+.back-to-catalogue {
+    font-family: "Circular Book";
+    font-size: 16px;
+}
+
 .empty-cart-phrase {
     font-family: "Circular Bold";
     font-size: 32px;
@@ -40,8 +45,8 @@
 }
 
 .empty-cart-image {
-    width: 50%;
-    height: 50%
+    width: 18%;
+    height: 18%
 }
 
 @media (max-width: 767px) {

@@ -259,9 +259,17 @@ const CheckoutItems = ({checkoutItems, imagePath}) => {
 
 class Checkout extends Component {
 
-    state = {
-        checkedCC: true,
-        checkedPP: false,
+    constructor(props) {
+        super(props);
+        this.state = {
+            checkedCC: true,
+            checkedPP: false,
+        }
+        this.ref = React.createRef();
+    }
+    
+    focusShippingForm() {
+        this.shippingForm.scrollIntoView()
     }
 
     onHandleChange = () => {
@@ -269,11 +277,19 @@ class Checkout extends Component {
     }
 
     updateCartItems = () => {
-        const { dataRequested } = this.props;
-        dataRequested();
-
-        setTimeout(()=>this.props.history.push(`/finish`), 2000);
-        setTimeout(()=>this.props.cartReloaded([]), 3000);
+        const { dataRequested, shippingAddress } = this.props;
+        if(shippingAddress.length !== 0) {
+            dataRequested();
+            setTimeout(()=>this.props.history.push(`/finish`), 2000);
+            setTimeout(()=>this.props.cartReloaded([]), 3000);
+        } else {
+            this.ref.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center',
+              });
+            alert("Please provide a shipping address to make a purchase!")
+        }
     }
 
     backgroundCC = {};
@@ -302,16 +318,12 @@ class Checkout extends Component {
             }
         return this.backgroundPP;
     }
-
-    
-
-    
-
   
     render() {
         const {checkoutItems, shippingAddress, imagePath, shippingAddressAdded, loading} = this.props;
         this.changeBackgroundCC();
         this.changeBackgroundPP();
+        console.log(shippingAddress);
 
         if (loading) {
             return <Spinner />
@@ -343,7 +355,7 @@ class Checkout extends Component {
                         </label>
                     </div>
 
-                    <div className="shipping-address">
+                    <div className="shipping-address" ref={this.ref}>
                         <ShippingAddress shippingAddress={shippingAddress} shippingAddressAdded={shippingAddressAdded} />
                     </div>
                 </div>

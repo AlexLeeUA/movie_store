@@ -46,8 +46,13 @@ class UpdateMovieInCart extends Component {
 
 class MoviePage extends Component {
 
+    state = {
+        genres: []
+    }
+
     componentDidMount() {
-        this.updateMovie()
+        this.updateMovie();
+        this.setState({genres: this.props.movie.genres})
     }
 
     updateMovie() {
@@ -64,9 +69,11 @@ class MoviePage extends Component {
 
         const {movie, imagePath, loading, defaultPrice, itemsAddedToCheckoutFromPP, itemsAddedToCart} = this.props;
         const fullPath=`${imagePath}${movie.path}`;
-        //const genres = movie.genres; 
-        //const names = genres.map((genre)=>genre.name); 
-        //const genresList = names.join(' | ');
+        
+        const genres = this.state.genres; 
+        const names = genres.map((genre)=>genre.name); 
+        const genresList = names.join(' | ');
+        console.log(genresList);
 
         if (loading) {
             return <Spinner />
@@ -81,7 +88,7 @@ class MoviePage extends Component {
                             {movie.title}
                         </div>
                         <div className="details" key={movie.id}>
-                            <div className="movie-genre">Movie genre: genres</div>
+                            <div className="movie-genre">Movie genre: {genresList}</div>
                             <div className="movie-release">Release: {movie.release}</div>
                         </div>
                         <div className="overview">

@@ -75,9 +75,14 @@ class ShoppingCartTable extends Component {
 
         if(cartItems.length===0) {
             return (
-                <div className="empty-cart">
-                    <div className="empty-cart-phrase">Ooops.. Your cart is empty</div>
-                    <img className="empty-cart-image" src={emptyShoppingImage} alt="empty-cart" />
+                <div>
+                    <Link to="/movielist/1/">
+                        <div className="back-to-catalogue">Back to catalogue</div>
+                    </Link>
+                    <div className="empty-cart">
+                        <div className="empty-cart-phrase">Ooops.. Your cart is empty</div>
+                        <img className="empty-cart-image" src={emptyShoppingImage} alt="empty-cart" />
+                    </div>
                 </div>
             )
         } else {

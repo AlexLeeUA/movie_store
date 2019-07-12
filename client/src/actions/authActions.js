@@ -72,6 +72,6 @@ export const logoutUser = () => (dispatch) => {
     //Set current user to empty object {} which will set isAuthenticated to false
     dispatch(setCurrentUser({}));
     dispatch(cartReloaded([]));
-    // Redirect to login
-    window.location.href = "/login"
+    // Redirect to current page
+    window.location=window.location.href;
 }
