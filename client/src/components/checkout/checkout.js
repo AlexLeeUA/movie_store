@@ -103,13 +103,11 @@ class ShippingAddressForm extends Component {
             phone: this.state.phone
         };
         
-        const errors = this.checkInputFields(shippingAddress);
-        console.log(errors);      
+        const errors = this.checkInputFields(shippingAddress);     
 
         if (errors.length === 0) {
             this.props.shippingAddressAdded(shippingAddress);
         }
-
     }
 
     render() {
@@ -323,7 +321,6 @@ class Checkout extends Component {
         const {checkoutItems, shippingAddress, imagePath, shippingAddressAdded, loading} = this.props;
         this.changeBackgroundCC();
         this.changeBackgroundPP();
-        console.log(shippingAddress);
 
         if (loading) {
             return <Spinner />

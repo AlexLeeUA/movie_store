@@ -73,7 +73,6 @@ class MoviePage extends Component {
         const genres = this.state.genres; 
         const names = genres.map((genre)=>genre.name); 
         const genresList = names.join(' | ');
-        console.log(genresList);
 
         if (loading) {
             return <Spinner />
